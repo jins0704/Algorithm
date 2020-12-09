@@ -2,9 +2,6 @@
 //  main.cpp
 //  2231_BruteForce
 //
-//  Created by 홍진석 on 2020/07/17.
-//  Copyright © 2020 홍진석. All rights reserved.
-//
 
 #include <iostream>
 using namespace std;
