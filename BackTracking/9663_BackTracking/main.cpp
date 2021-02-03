@@ -1,67 +1,101 @@
 //
 //  main.cpp
-//  9663_BackTracking
+//  9663_Backtracking
 //
-//  Created by 홍진석 on 2020/09/17.
-//  Copyright © 2020 홍진석. All rights reserved.
+//  Created by 홍진석 on 2021/02/03.
 //
 
 #include <iostream>
 
 using namespace std;
 
-int N;
 int arr[16][16];
-int cnt;
+int N;
+int sol;
+int check[16][16];
 
-bool check(int line, int i){
-    for(int w=0; w< line; w++){
-        if(arr[w][i]==1) return false;
+void Queen(int cnt){
+    //성공 가짓 수 증가
+    if(cnt == N){
+       sol++;
     }
-    int xx= line;
-    int yy= i;
-    while(xx>=0 && yy>=0){
-        if(arr[xx][yy] ==1) return false;
-        xx--;
-        yy--;
-    }
-    xx= line;
-    yy= i;
-    while(xx>=0 && yy<N){
-        if(arr[xx][yy]==1) return false;
-        xx--;
-        yy++;
-    }
-    return true;
-}
-void bt(int line){
     
- 
-    if(line == N){
-       
-        cnt ++;
-        return;
-    }
     else{
+        //위아래대각선에 놓으면 안된다.
         for(int i=0; i<N; i++){
-            if(check(line,i)){
-                arr[line][i] =1;
-                bt(line+1);
-                arr[line][i] = 0;
+            
+            if(check[cnt][i] == 0){
+                
+                arr[cnt][i] = 1;
+                
+                //막기
+                check[cnt][i]++;
+                
+                for(int w=0; w<N; w++){
+                    
+                    //자기 제외 좌우 양옆 막기
+                    if(w != cnt){
+                        check[w][i]++;
+                    }
+                    if(w != i){
+                        check[cnt][w]++;
+                    }
+                    
+                    // 자기 제외 '\'대각선 막기
+                    if(cnt-w>=0 && i-w>=0 && w>=1){
+                        check[cnt-w][i-w]++;
+                    }
+                    if(cnt+w<N && i+w<N && w>=1){
+                        check[cnt+w][i+w]++;
+                    }
+                    
+                    // '/'대각선 막기
+                    if(cnt-w>=0 && i+w <N && w>=1){
+                        check[cnt-w][i+w]++;
+                    }
+                    if(cnt+w<N && i-w >=0 && w>=1){
+                        check[cnt+w][i-w]++;
+                    }
+                    
+                }
+                Queen(cnt+1);
+                arr[cnt][i] = 0;
+                
+                //해제
+                check[cnt][i]--;
+                for(int w=0; w<N; w++){
+                    if(w != cnt){
+                        check[w][i]--;
+                    }
+                    if(w != i){
+                        check[cnt][w]--;
+                    }
+                    
+                    if(cnt-w>=0 && i-w>=0 && w>=1){
+                        check[cnt-w][i-w]--;
+                    }
+                    if(cnt+w<N && i+w<N && w>=1){
+                        check[cnt+w][i+w]--;
+                    }
+                    
+                    if(cnt-w>=0 && i+w <N && w>=1){
+                        check[cnt-w][i+w]--;
+                    }
+                    if(cnt+w<N && i-w>=0 && w>=1){
+                        check[cnt+w][i-w]--;
+                    }
+                }
             }
         }
     }
 }
 
 int main() {
-    cin >> N;
-    if(N==1){
-        cout << 1;
-        return 0;
-    }
-   
-    bt(0);
     
-    cout << cnt;
+    scanf("%d",&N);
+    
+    Queen(0);
+    
+    printf("%d",sol);
     return 0;
 }
