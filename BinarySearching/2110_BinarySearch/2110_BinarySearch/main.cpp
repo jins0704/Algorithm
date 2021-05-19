@@ -17,47 +17,9 @@ using namespace std;
 //가장 인접한 두 공유기 사이의 거리를 가능한 크게 설치한다.
 //C개의 공유기를 N개의 집에 적당히 설치해서 가장 인저한 두 공유기 사이의 거리 최대가 되게 하라
 
-int N,C,n;
-long long sol;
-vector<long long> v;
-
-void wifi(int startX, int endX, int wNum){
-    
-    if(wNum <=0){
-        return;
-    }
-
-    long long distance = 0;
-    long long maxDistance = 0;
-    int maxX = 0;
-   
-    bool check = false;
-    for(int i=startX+1; i<endX; i++){
-        
-        check = true;
-        //cout << v[startX] << " " << v[i] << " " << v[endX] << endl;
-        if(abs(v[i]-v[startX]) < v[endX] - v[i]){
-            distance = abs(v[i]-v[startX]);
-        }
-        else{
-            distance = v[endX] - v[i];
-        }//탐색 지점의 두 공유기 최대 거리 확인
-        
-        if(maxDistance < distance){
-            maxDistance = distance;
-            maxX = i;
-        }//사이의 가장 좋은 공유기 위치, 거리 찾음
-    }
-
-    if(!check){return;}
-    
-    if(wNum == 1){sol = maxDistance;}
-    
-    else if(wNum>1){
-        wifi(startX, maxX,wNum-1);
-        wifi(maxX, endX,wNum-1);
-    }
-}
+int N,C;
+int n;
+vector<int> house;
 
 int main() {
     
@@ -65,23 +27,47 @@ int main() {
         
     for(int i=0; i<N; i++){
         cin >> n;
-        v.push_back(n);
+        house.push_back(n);
     }
     
-    sort(v.begin(), v.end());
+    sort(house.begin(), house.end());
+    int ans = 1;
     
-//    for(int i=0; i<v.size(); i++){
-//        cout << v.at(i) << endl;
-//    }
+    int cnt = 0;
+    int low = 1; //최소거리
+    int high = house[N-1] - house[0]; //최대거리
+    int tmp;
     
-    C--;//0 번째 설치
-    C--;//가장 끝 번째 설치
+    while(low <= high){
+        vector<int> sol;
+        cnt = 1;
+        int mid = (low+high)/2;
+        tmp = house[0];
+        
+        for(int i=0; i<N; i++){
+            int d = house[i] - tmp;
+            
+            if(mid <= d){
+                cout << house[i] << " ";
+                cnt ++;//설치
+                tmp = house[i];
+                sol.push_back(i);
+            }
+        }
+        cout << "설치끝"<< endl;
+        if(cnt >= C){
+            ans = mid;
+            low = mid+1;
+        
+            cout <<"if "<< low << " " << high<< endl;
+        }
+        else{
+            high = mid -1;
+            //cout <<"else" << endl;
+            cout <<"else "<< low << " " << high<< endl;
+        }
+    }
     
-    sol = v.at(v.size()-1) - v.at(0);
-    
-    wifi(0, int(v.size()-1),C);
-    
-    cout << sol;
-    
+    cout << ans;
     return 0;
 }
