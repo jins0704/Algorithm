@@ -6,84 +6,42 @@
 //
 
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
-//1. 한글자가 다른 글자로 변경
-//2. 첫번째 부터 K글자 까지 모두 변경
-//최소 몇번으로 전부 A분자로 만들지 구하기
 
 int N;
-char c[1000001];
-
-void changeMethodB(int index, char c[]){
-    for(int i=0; i<= index; i++){
-        c[i] = (c[i] == 'A') ? 'B' : 'A';
-    }
-}
-
-bool checkComplete(char c[], int N){
-    for(int i=0; i<N; i++){
-        if(c[i] == 'B'){return true;}
-    }
-    return false;
-}
+int dp[1000001][2];
+string s;
 
 int main() {
-    int count = 0;
     cin >> N;
+    cin >> s;
     
-    for(int i=0; i<N; i++){
-        cin >> c[i];
+    //dp[N][0] = N번째까지 A로 만드는 수
+    //dp[N][1] = N번째까지 B로 만드는 수
+    if(s[0] == 'A'){
+        dp[0][0] = 0;
+        dp[0][1] = 1;
+    }
+    else{
+        dp[0][0] = 1;
+        dp[0][1] = 0;
     }
     
-    int checkIndex = N-1;
-    
-    while(checkComplete(c, N)){
-        for(int i=0; i< N; i++){
-            cout << c[i] << " ";
-        }cout << endl;
-        
-        if(count == 30){break;}
-        
-        if(c[checkIndex] == 'B'){
-            if(checkIndex == 0){
-                cout << "A선택" << endl;
-                c[checkIndex] = 'A';
-            }
-            else{
-                if(c[checkIndex-1] == 'A'){
-                    cout << "A선택" << endl;
-                    c[checkIndex] = 'A';
-                }
-                
-                for(int j=1; j<=checkIndex; j++){
-                    if(c[checkIndex-j] != 'B'){
-                        cout << "B선택" << endl;
-                        changeMethodB(checkIndex, c);
-                        checkIndex = checkIndex-j+1;
-                        break;
-                    }
-                }
-            }
-        
-            count ++;
+    for(int i=1; i<N; i++){
+        if(s[i] == 'A'){
+            dp[i][0] = min(dp[i-1][0], dp[i-1][1]+1);//A로 만들기
+            dp[i][1] = min(dp[i-1][0]+1, dp[i-1][1]+1);//B로 만들기
         }
+        
         else{
-            while(c[checkIndex] == 'A'){
-                if(checkIndex == 0){break;}
-                checkIndex--;
-            }
+            dp[i][0] = min(dp[i-1][0]+1, dp[i-1][1]+1);
+            dp[i][1] = min(dp[i-1][0]+1, dp[i-1][1]);
         }
-        
-        for(int i=0; i< N; i++){
-            cout << c[i] << " ";
-        }cout << endl;
-        cout << "===========" << endl;
-        cout << checkIndex << endl;
     }
     
-    
-    cout << count;
+    cout << dp[N-1][0];
     return 0;
 }
 
