@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		410D5BA2627F2AA0A82A5195 /* Pods_Swift_For_RESTAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BCA9985BE8C3737E0CD22B9 /* Pods_Swift_For_RESTAPI.framework */; };
+		4F4B5D5526FCAB3D00E90E36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4B5D5426FCAB3D00E90E36 /* AppDelegate.swift */; };
+		4F4B5D5726FCAB3D00E90E36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4B5D5626FCAB3D00E90E36 /* SceneDelegate.swift */; };
+		4F4B5D5926FCAB3D00E90E36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4B5D5826FCAB3D00E90E36 /* ViewController.swift */; };
+		4F4B5D5C26FCAB3D00E90E36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F4B5D5A26FCAB3D00E90E36 /* Main.storyboard */; };
+		4F4B5D5E26FCAB4200E90E36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F4B5D5D26FCAB4200E90E36 /* Assets.xcassets */; };
+		4F4B5D6126FCAB4200E90E36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F4B5D5F26FCAB4200E90E36 /* LaunchScreen.storyboard */; };
+		4F4B5D6B26FCAD1500E90E36 /* Extension_String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4B5D6A26FCAD1500E90E36 /* Extension_String.swift */; };
+		4F4B5D6D26FCAD3200E90E36 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4B5D6C26FCAD3200E90E36 /* APIConstants.swift */; };
+		4F4B5D6F26FCAD4200E90E36 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4B5D6E26FCAD4200E90E36 /* APIService.swift */; };
+		4F4B5D7126FCAD5400E90E36 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4B5D7026FCAD5400E90E36 /* NetworkResult.swift */; };
+		4F4B5D7326FCAD6200E90E36 /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4B5D7226FCAD6200E90E36 /* RequestHandler.swift */; };
+		4F4B5D7526FCAD6B00E90E36 /* StarResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4B5D7426FCAD6B00E90E36 /* StarResponse.swift */; };
+		4F4B5D7726FCAD7900E90E36 /* Problem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4B5D7626FCAD7900E90E36 /* Problem.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2BCA9985BE8C3737E0CD22B9 /* Pods_Swift_For_RESTAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_For_RESTAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F4B5D5126FCAB3D00E90E36 /* Swift_For_RESTAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_For_RESTAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F4B5D5426FCAB3D00E90E36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4F4B5D5626FCAB3D00E90E36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4F4B5D5826FCAB3D00E90E36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4F4B5D5B26FCAB3D00E90E36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4F4B5D5D26FCAB4200E90E36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4F4B5D6026FCAB4200E90E36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4F4B5D6226FCAB4200E90E36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F4B5D6A26FCAD1500E90E36 /* Extension_String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension_String.swift; sourceTree = "<group>"; };
+		4F4B5D6C26FCAD3200E90E36 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		4F4B5D6E26FCAD4200E90E36 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		4F4B5D7026FCAD5400E90E36 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		4F4B5D7226FCAD6200E90E36 /* RequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
+		4F4B5D7426FCAD6B00E90E36 /* StarResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarResponse.swift; sourceTree = "<group>"; };
+		4F4B5D7626FCAD7900E90E36 /* Problem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem.swift; sourceTree = "<group>"; };
+		653DF7759F26CE43322547CA /* Pods-Swift_For_RESTAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_For_RESTAPI.release.xcconfig"; path = "Target Support Files/Pods-Swift_For_RESTAPI/Pods-Swift_For_RESTAPI.release.xcconfig"; sourceTree = "<group>"; };
+		E90AF84895E54C001481E0D6 /* Pods-Swift_For_RESTAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_For_RESTAPI.debug.xcconfig"; path = "Target Support Files/Pods-Swift_For_RESTAPI/Pods-Swift_For_RESTAPI.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4F4B5D4E26FCAB3D00E90E36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				410D5BA2627F2AA0A82A5195 /* Pods_Swift_For_RESTAPI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4F4B5D4826FCAB3D00E90E36 = {
+			isa = PBXGroup;
+			children = (
+				4F4B5D5326FCAB3D00E90E36 /* Swift_For_RESTAPI */,
+				4F4B5D5226FCAB3D00E90E36 /* Products */,
+				942B5AE2E3603260CCAAE302 /* Pods */,
+				A24E58CB18C499BDEF3F0000 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4F4B5D5226FCAB3D00E90E36 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4F4B5D5126FCAB3D00E90E36 /* Swift_For_RESTAPI.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4F4B5D5326FCAB3D00E90E36 /* Swift_For_RESTAPI */ = {
+			isa = PBXGroup;
+			children = (
+				4F4B5D6826FCACE400E90E36 /* Resource */,
+				4F4B5D6926FCACFC00E90E36 /* Network */,
+				4F4B5D7826FCAD7E00E90E36 /* Model */,
+				4F4B5D5826FCAB3D00E90E36 /* ViewController.swift */,
+				4F4B5D6226FCAB4200E90E36 /* Info.plist */,
+				4F4B5D6A26FCAD1500E90E36 /* Extension_String.swift */,
+			);
+			path = Swift_For_RESTAPI;
+			sourceTree = "<group>";
+		};
+		4F4B5D6826FCACE400E90E36 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				4F4B5D5D26FCAB4200E90E36 /* Assets.xcassets */,
+				4F4B5D5426FCAB3D00E90E36 /* AppDelegate.swift */,
+				4F4B5D5626FCAB3D00E90E36 /* SceneDelegate.swift */,
+				4F4B5D5F26FCAB4200E90E36 /* LaunchScreen.storyboard */,
+				4F4B5D5A26FCAB3D00E90E36 /* Main.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		4F4B5D6926FCACFC00E90E36 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4F4B5D6C26FCAD3200E90E36 /* APIConstants.swift */,
+				4F4B5D6E26FCAD4200E90E36 /* APIService.swift */,
+				4F4B5D7026FCAD5400E90E36 /* NetworkResult.swift */,
+				4F4B5D7226FCAD6200E90E36 /* RequestHandler.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		4F4B5D7826FCAD7E00E90E36 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4F4B5D7426FCAD6B00E90E36 /* StarResponse.swift */,
+				4F4B5D7626FCAD7900E90E36 /* Problem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		942B5AE2E3603260CCAAE302 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E90AF84895E54C001481E0D6 /* Pods-Swift_For_RESTAPI.debug.xcconfig */,
+				653DF7759F26CE43322547CA /* Pods-Swift_For_RESTAPI.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A24E58CB18C499BDEF3F0000 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2BCA9985BE8C3737E0CD22B9 /* Pods_Swift_For_RESTAPI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4F4B5D5026FCAB3D00E90E36 /* Swift_For_RESTAPI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F4B5D6526FCAB4200E90E36 /* Build configuration list for PBXNativeTarget "Swift_For_RESTAPI" */;
+			buildPhases = (
+				AC1863AF58C75EFFC4719D24 /* [CP] Check Pods Manifest.lock */,
+				4F4B5D4D26FCAB3D00E90E36 /* Sources */,
+				4F4B5D4E26FCAB3D00E90E36 /* Frameworks */,
+				4F4B5D4F26FCAB3D00E90E36 /* Resources */,
+				CDF83A25A8A734EC401C0F33 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Swift_For_RESTAPI;
+			productName = Swift_For_RESTAPI;
+			productReference = 4F4B5D5126FCAB3D00E90E36 /* Swift_For_RESTAPI.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4F4B5D4926FCAB3D00E90E36 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					4F4B5D5026FCAB3D00E90E36 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+				};
+			};
+			buildConfigurationList = 4F4B5D4C26FCAB3D00E90E36 /* Build configuration list for PBXProject "Swift_For_RESTAPI" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4F4B5D4826FCAB3D00E90E36;
+			productRefGroup = 4F4B5D5226FCAB3D00E90E36 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4F4B5D5026FCAB3D00E90E36 /* Swift_For_RESTAPI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4F4B5D4F26FCAB3D00E90E36 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F4B5D6126FCAB4200E90E36 /* LaunchScreen.storyboard in Resources */,
+				4F4B5D5E26FCAB4200E90E36 /* Assets.xcassets in Resources */,
+				4F4B5D5C26FCAB3D00E90E36 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AC1863AF58C75EFFC4719D24 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Swift_For_RESTAPI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDF83A25A8A734EC401C0F33 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Swift_For_RESTAPI/Pods-Swift_For_RESTAPI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Swift_For_RESTAPI/Pods-Swift_For_RESTAPI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Swift_For_RESTAPI/Pods-Swift_For_RESTAPI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4F4B5D4D26FCAB3D00E90E36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F4B5D7526FCAD6B00E90E36 /* StarResponse.swift in Sources */,
+				4F4B5D6B26FCAD1500E90E36 /* Extension_String.swift in Sources */,
+				4F4B5D6D26FCAD3200E90E36 /* APIConstants.swift in Sources */,
+				4F4B5D7726FCAD7900E90E36 /* Problem.swift in Sources */,
+				4F4B5D5926FCAB3D00E90E36 /* ViewController.swift in Sources */,
+				4F4B5D5526FCAB3D00E90E36 /* AppDelegate.swift in Sources */,
+				4F4B5D6F26FCAD4200E90E36 /* APIService.swift in Sources */,
+				4F4B5D5726FCAB3D00E90E36 /* SceneDelegate.swift in Sources */,
+				4F4B5D7326FCAD6200E90E36 /* RequestHandler.swift in Sources */,
+				4F4B5D7126FCAD5400E90E36 /* NetworkResult.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4F4B5D5A26FCAB3D00E90E36 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4F4B5D5B26FCAB3D00E90E36 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4F4B5D5F26FCAB4200E90E36 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4F4B5D6026FCAB4200E90E36 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4F4B5D6326FCAB4200E90E36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4F4B5D6426FCAB4200E90E36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4F4B5D6626FCAB4200E90E36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E90AF84895E54C001481E0D6 /* Pods-Swift_For_RESTAPI.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Swift_For_RESTAPI/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "a.Swift-For-RESTAPI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4F4B5D6726FCAB4200E90E36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 653DF7759F26CE43322547CA /* Pods-Swift_For_RESTAPI.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Swift_For_RESTAPI/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "a.Swift-For-RESTAPI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4F4B5D4C26FCAB3D00E90E36 /* Build configuration list for PBXProject "Swift_For_RESTAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F4B5D6326FCAB4200E90E36 /* Debug */,
+				4F4B5D6426FCAB4200E90E36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F4B5D6526FCAB4200E90E36 /* Build configuration list for PBXNativeTarget "Swift_For_RESTAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F4B5D6626FCAB4200E90E36 /* Debug */,
+				4F4B5D6726FCAB4200E90E36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4F4B5D4926FCAB3D00E90E36 /* Project object */;
+}
